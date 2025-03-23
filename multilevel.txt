@@ -1,0 +1,33 @@
+class grandfather
+{
+  void house()
+  {
+     System.out.println("This is house ");
+   }
+}
+class father extends grandfather
+{
+  void car()
+  {
+     System.out.println("This is car");
+  }
+}
+class son extends father
+{
+  void bike()
+   {
+       System.out.println("This is bike");
+   }
+}
+class main
+{
+  public static void main(String args[])
+ {
+  father f=new father();
+  son s=new son();
+  grandfather gf=new grandfather();
+  gf.house();
+  f.car();f.house();
+  s.bike();s.car();s.house();
+ }
+}

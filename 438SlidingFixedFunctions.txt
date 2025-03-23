@@ -1,0 +1,38 @@
+def fun(dica,dicb):
+            if len(dica)!=len(dicb):
+                return False
+            for i in dica:
+                if i not in dicb or dica[i]!=dicb[i]:
+                    return False
+            return True
+
+
+        dica={}
+        dicb={}
+        for i in p:
+            if i in dicb:
+                dicb[i]+=1
+            else:
+                dicb[i]=1
+        ans=[]
+        n=len(s)
+        l=0
+        k=len(p)
+        for r in range(n):
+            ch=s[r]
+            if  ch in dica:
+                dica[ch]+=1
+            else:
+                dica[ch]=1
+            if r-l==k:
+                lval=s[l]
+                dica[lval]-=1
+                if dica[lval]==0:
+                    dica.pop(lval)
+                l+=1
+            if r-l+1==k:
+                if fun(dica,dicb):
+                    ans.append(l)
+        return ans   
+
+                

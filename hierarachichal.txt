@@ -1,0 +1,34 @@
+class father
+{
+  void car()
+  {
+     System.out.println("This is car");
+  }
+}
+class son extends father
+{
+  void bike()
+   {
+       System.out.println("This is bike");
+   }
+}
+class daughter extends father
+{
+  void makeup()
+  {
+    System.out.println("This is bike");
+   }
+}
+     
+class main
+{
+  public static void main(String args[])
+ {
+  father f=new father();
+  son s=new son();
+  daughter d=new daughter();
+  f.car();
+  s.bike();s.car();
+  d.makeup();d.car();
+ }
+}

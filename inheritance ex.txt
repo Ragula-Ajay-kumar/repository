@@ -1,0 +1,50 @@
+class college
+{
+  String name;
+  String principal;
+  int studentCount;
+  void work()
+  {
+     ;
+   }
+}
+class CMRIT extends college
+{
+  CMRIT()
+  {
+    name="CMRIT";
+    principal="satya";
+    studentCount=40000;
+  }
+  void work()
+  {
+    system.out.println(name+" "+principal+" "+studentCount);
+    system.out.println("cmrit is having a holiday");
+  }
+}
+class CMRCET extends college
+{
+  CMRCET()
+  {
+    name="CMRCET"
+    principal="vara"
+    studentCount=5000;
+  }
+  void work()
+  {
+    system.out.println(name+" "+principal+" "+studentCount);
+    system.out.println("cmrcet is not having a holiday");--
+  }
+}
+public class inheritance
+{
+  public static void main(String args[])
+  {
+    CMRIT clg1=new CMRIT();
+    clg1.work();
+    CMCET clg2=new CMCET();
+    clg1.work();
+   }
+}
+
+

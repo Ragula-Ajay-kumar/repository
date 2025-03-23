@@ -1,0 +1,25 @@
+class father
+{
+  void car()
+  {
+     System.out.println("This is car");
+  }
+}
+class son extends father
+{
+  void bike()
+   {
+       System.out.println("This is bike");
+   }
+}
+class main
+{
+  public static void main(String args[])
+ {
+  father f=new father();
+  son s=new son();
+  f.car();
+  s.bike();
+  s.car();
+ }
+}

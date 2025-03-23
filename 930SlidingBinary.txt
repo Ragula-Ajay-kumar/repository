@@ -1,0 +1,21 @@
+class Solution:
+    def numSubarraysWithSum(self, nums: List[int], goal: int) -> int:
+        def atMostK(nums,goal):
+            if goal<0:
+                return 0
+            n=len(nums)
+            ans=0
+            temp=0
+            l=0
+            for r in range(n):
+                if nums[r]==1:
+                    temp+=1
+                    
+                while temp>goal:
+                    if nums[l]==1:
+                        temp-=1
+                    l+=1
+                ans+=r-l+1
+            return ans
+        return(atMostK(nums,goal)-(atMostK(nums,goal-1)))
+        
